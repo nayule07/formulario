@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+        <!-- Título da página (aparece na aba) -->
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Cadastro Pessoal</h1>
+            <p id="subtitulo">Complete suas informações</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form>
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+
+                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="sobrenome"><strong>Sobrenome</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+
+            </fieldset> 
+
+            <!-- Campo de email com-->
+            <fieldset class="grupo">
+                <div class="campo">
+                    <label for="email"><strong>Email</strong></label>
+                    <input type="email" name="email" id="email" required placeholder="seuemail@dominio.com">
+                </div>
+            
+                <div class="campo">
+                    <label for="telefone"><strong>Telefone</strong></label>
+                    <input type="tel" name="telefone" id="telefone" required placeholder="(xx)xxxxx-xxxx">     
+                </div>
+            </fieldset>
+
+            <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+                <label><strong>Como você se identifica?</strong></label>
+                <label>
+                    <input type="radio" name="autodeclaracao" value="amarelo" checked>Amarelo
+                </label>
+                <label>
+                    <input type="radio" name="autodeclaracao" value="branco">Branco
+                </label>
+                <label>
+                    <input type="radio" name="autodeclaracao" value="pardo">Pardo
+                </label>
+                <label>
+                    <input type="radio" name="autodeclaracao" value="preto">Preto
+                </label>
+                <label>
+                    <input type="radio" name="autodeclaracao" value="outro">Outro
+                </label>
+            </div>
+
+            <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="idade"><strong>Idade</strong></label>
+                <select id="idade" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option>Abaixo de 15</option>
+                  <option>16-20</option>
+                  <option>21-25</option>
+                  <option>26-30</option>
+                  <option>Acima de 30</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+                <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+                <div id="check">
+                    <label><strong>Selecione as atividades que costuma fazer</strong></label><br><br>
+                    <input type="checkbox" id="atividade1" name="atividade1" value="esportes">
+                    <label for="atividade1">Esportes</label>
+                    <input type="checkbox" id="atividade2" name="atividade2" value="livro">
+                    <label for="atividade2">Ler livros</label>
+                    <input type="checkbox" id="atividade3" name="atividade3" value="videogame">
+                    <label for="atividade3">Jogar video-games</label>
+                    <input type="checkbox" id="atividade4" name="atividade4" value="filmesEseries">
+                    <label for="atividade4">Assistir filmes e séries</label>
+                    <input type="checkbox" id="atividade5" name="atividade5" value="outras">
+                    <label for="atividade5">Outras atividades</label>
+                </div>
+            </fieldset>
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br>
+                <label for="experiencia"><strong>Conte algo interessante sobre você: </strong></label>
+                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+            </div>
+
+            <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+
+    </body>
+
+</html>
